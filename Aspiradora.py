@@ -90,6 +90,7 @@ print(tabulate(cuartos, headers=["N° Cuarto", "Estado", "Aspiradora"], tablefmt
 
 inicial = definirEstados.index(estadoInicial)
 resultado, costo = busqueda(calcular(estados,finales,acciones,inicial))
+restantes = 5 - costo
 
 #Imprimir
 print()
@@ -97,5 +98,6 @@ print("Acciones a realizar:\n")
 print(resultado)
 print()
 print("Costo del camino: " + str(int(costo)))
+print("Acciones disponibles: " + str(int(restantes)) + " de 5")
 print()
 input("Presiona enter para finalizar el programa...")
